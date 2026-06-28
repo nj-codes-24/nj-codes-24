@@ -1,28 +1,4 @@
 <!-- ████████████████████████████████████████████████████████████████ -->
-<!--                     HERO — ANIMATED TYPING                      -->
-<!-- ████████████████████████████████████████████████████████████████ -->
-
-<div align="center">
-
-<a href="https://github.com/nj-codes-24">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=800&color=A78BFA&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=100&lines=Nishchal+Jain+%E2%80%94+AI+%2F+ML+Engineer;Building+systems+that+think%2C+learn%2C+and+ship." alt="Typing SVG" />
-</a>
-
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=15&duration=2500&pause=1000&color=6EE7B7&center=true&vCenter=true&repeat=true&width=750&height=40&lines=B.Tech+AI+%26+Data+Science+%E2%80%94+IIITDM+Kurnool+%7C+CGPA+8.12;Deep+Learning+%C2%B7+NLP+%C2%B7+Multimodal+AI+%C2%B7+LLM+Systems;Building+intelligent+systems+from+research+to+production" alt="Sub Typing SVG" />
-
-</div>
-
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!--                       WAVE DIVIDER                              -->
-<!-- ████████████████████████████████████████████████████████████████ -->
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,30&height=3&section=header" width="100%"/>
-
-<br/>
-
-<!-- ████████████████████████████████████████████████████████████████ -->
 <!--                    ABOUT — GLASS PANEL                          -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 
@@ -41,7 +17,7 @@ class NishchalJain:
     focus = [
         "Deep Learning & Neural Architecture",
         "NLP · Multimodal AI · Computer Vision",
-        "Agentic AI Pipelines & LLM Orchestration",
+        "LLM Systems & Intelligent Pipelines",
         "Data Science & Predictive Modelling",
     ]
 
@@ -143,16 +119,6 @@ with a relentless focus on architecture, performance, and real-world impact.
 <br/>
 
 <!-- ████████████████████████████████████████████████████████████████ -->
-<!--                  TOP LANGUAGES CARD                             -->
-<!-- ████████████████████████████████████████████████████████████████ -->
-
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nj-codes-24&layout=compact&theme=radical&bg_color=0d0d1a&border_color=7c3aed&title_color=a78bfa&text_color=e2e8f0&hide_border=false&langs_count=8" width="48%"/>
-</div>
-
-<br/>
-
-<!-- ████████████████████████████████████████████████████████████████ -->
 <!--                  SECTION DIVIDER — NEON                         -->
 <!-- ████████████████████████████████████████████████████████████████ -->
 
@@ -172,8 +138,6 @@ with a relentless focus on architecture, performance, and real-world impact.
 
 <br/>
 
-<!-- ── ROW 1 ────────────────────────────────────────────────── -->
-
 <table align="center" border="0" cellpadding="12" cellspacing="0" width="94%">
 <tr>
 
@@ -191,9 +155,9 @@ with a relentless focus on architecture, performance, and real-world impact.
 
 </a>
 
-**Architecture:** End-to-end supervised learning pipeline for binary customer-churn classification. A multi-layer ANN is trained in **Keras / TensorFlow** on the Churn_Modelling dataset — featuring `Label Encoding` + `OneHotEncoding` for categorical features and `StandardScaler` normalisation, all serialised into a reusable `preprocessor.pkl` artifact. The trained model is persisted as `model.h5` and wired into a live **Streamlit** inference dashboard. Separate `exploration.py` and `prediction.py` modules enforce clean separation between EDA and runtime inference.
+**Architecture:** End-to-end supervised learning pipeline for binary customer-churn classification. A **3-layer, 2,900-parameter ANN** is trained in **Keras / TensorFlow** on 10,000+ banking records — achieving **76% validation accuracy and 61% recall** on at-risk accounts. Feature engineering uses a `ColumnTransformer` combining `StandardScaler` on 8 numeric features and `OneHotEncoding` on categoricals, all serialised into a reusable `preprocessor.pkl` artifact with **zero data leakage**. The preprocessing pipeline sustains **16,700+ predictions/second** throughput. The trained model is persisted as `model.h5` with resource-cached HDF5 loading and wired into a live **Streamlit** dashboard delivering churn probability outputs in under **150ms**.
 
-**Why it matters:** Demonstrates a complete ML lifecycle — data ingestion, feature engineering, model training, artifact serialisation, and interactive deployment — without a single line of boilerplate web framework.
+**Why it matters:** Demonstrates a complete ML lifecycle — data ingestion, zero-leakage feature engineering, ANN training, artifact serialisation, and sub-150ms interactive deployment — with measurable production-grade performance metrics.
 
 <table border="0" cellpadding="3">
 <tr>
@@ -209,27 +173,27 @@ with a relentless focus on architecture, performance, and real-world impact.
 <!-- PROJECT 2 -->
 <td align="left" valign="top" width="50%">
 
-<a href="https://github.com/nj-codes-24/is-my-fit-cooked">
+<a href="https://github.com/nj-codes-24/CSV-to-Model-Auto-Tuner">
 
 ```
 ╔══════════════════════════════════════╗
-║  👁️  Is My Fit Cooked?               ║
-║  Multimodal Vision AI · Flutter      ║
+║  ⚙️  AutoML Engine                   ║
+║  CSV → Cleaned → Benchmarked → Tuned ║
 ╚══════════════════════════════════════╝
 ```
 
 </a>
 
-**Architecture:** A production-grade multimodal AI mobile application built with **Flutter + Riverpod 2.0** that uses **Generative Vision models via OpenRouter** to perform real-time outfit analysis from camera or gallery input. The image pipeline is non-trivial: payloads are compressed client-side with `flutter_image_compress`, asynchronously offloaded to **Cloudflare R2** object storage, and only lightweight CDN URLs are sent to the model — eliminating Base64 token bloat entirely. Dynamic **LLM routing** (e.g. `gpt-oss-120b:free` → `qwen3-coder:free`) provides fault tolerance under rate limits. Heavy JSON serialisation is offloaded to background **Dart isolates** via `compute()`, preserving 60fps UI. Secrets are injected at build time via `--dart-define`; device persistence is AES-encrypted through `flutter_secure_storage`.
+**Architecture:** A fully data-agnostic AutoML engine that takes any classification CSV and returns a fine-tuned, production-ready model — zero training code required. The `pipeline.py` module dynamically orchestrates and benchmarks **9 parallel classification algorithms** (Logistic Regression, Decision Tree, Random Forest, SVM, KNN, Naive Bayes, AdaBoost, Gradient Boosting, XGBoost) with sub-**9-second total processing** on 5,000+ record datasets. An automated data-cleaning stage runs at ~**11ms preprocessing latency** with a **3.36 MB memory footprint**, programmatically detecting and purging correlated, zero-variance, and high-cardinality features. The winning model is then pushed through automated **5-fold cross-validation hyperparameter search** via `RandomizedSearchCV` inside a **5.8-second tuning window**, lifting accuracy from 97.7% → **98.1%**. A `Streamlit` front-end makes the entire pipeline accessible with a single file upload.
 
-**Why it matters:** Solves real multimodal latency problems at the mobile edge — not a toy demo. Domain-driven folder structure (`closet/`, `explore/`, `fit_check/`) with strict separation of presentation, domain, and provider layers.
+**Live Demo →** [csv-to-model-auto-tuner.streamlit.app](https://csv-to-model-auto-tuner.streamlit.app)
 
 <table border="0" cellpadding="3">
 <tr>
-<td><img src="https://img.shields.io/badge/Flutter-0d0d1a?style=flat-square&logo=flutter&logoColor=38bdf8"/></td>
-<td><img src="https://img.shields.io/badge/Riverpod_2.0-0d0d1a?style=flat-square&logo=dart&logoColor=a78bfa"/></td>
-<td><img src="https://img.shields.io/badge/OpenRouter-0d0d1a?style=flat-square&logo=openai&logoColor=6ee7b7"/></td>
-<td><img src="https://img.shields.io/badge/Cloudflare_R2-0d0d1a?style=flat-square&logo=cloudflare&logoColor=f97316"/></td>
+<td><img src="https://img.shields.io/badge/Python-0d0d1a?style=flat-square&logo=python&logoColor=6ee7b7"/></td>
+<td><img src="https://img.shields.io/badge/Scikit--learn-0d0d1a?style=flat-square&logo=scikitlearn&logoColor=f59e0b"/></td>
+<td><img src="https://img.shields.io/badge/XGBoost-0d0d1a?style=flat-square&logo=xgboost&logoColor=f97316"/></td>
+<td><img src="https://img.shields.io/badge/Streamlit-0d0d1a?style=flat-square&logo=streamlit&logoColor=f43f5e"/></td>
 </tr>
 </table>
 
@@ -237,104 +201,6 @@ with a relentless focus on architecture, performance, and real-world impact.
 
 </tr>
 </table>
-
-<br/>
-
-<!-- ── ROW 2 ────────────────────────────────────────────────── -->
-
-<table align="center" border="0" cellpadding="12" cellspacing="0" width="94%">
-<tr>
-
-<!-- PROJECT 3 -->
-<td align="left" valign="top" width="50%">
-
-<a href="https://github.com/nj-codes-24/staqd">
-
-```
-╔══════════════════════════════════════╗
-║  🧬  STAQD                           ║
-║  Gemini RAG · AI Research Platform   ║
-╚══════════════════════════════════════╝
-```
-
-</a>
-
-**Architecture:** A **React 19 + TypeScript + Vite** single-page application that integrates the **Google Gemini API** (`@google/genai`) as an embedded research co-pilot inside an editorial reading environment for academic papers. The AI layer surfaces as an inline side-panel chatbot and auto-generated study cue cards — both powered by live Gemini inference against the currently viewed document. The state layer is managed through React Contexts with **Framer Motion** (`motion/react`) handling all micro-interactions and glassmorphic overlay transitions. A **Supabase + PLpgSQL** backend (65 commits deep) handles user profiles, bookmarks, and paper metadata with real-time sync. The dynamic filtering engine (Relevance / Publisher / Sub-topic) updates the UI synchronously without page reloads.
-
-**Why it matters:** Goes beyond a wrapper — the Gemini integration is deeply contextual, operating over structured document state rather than a generic chat window.
-
-<table border="0" cellpadding="3">
-<tr>
-<td><img src="https://img.shields.io/badge/React_19-0d0d1a?style=flat-square&logo=react&logoColor=6ee7b7"/></td>
-<td><img src="https://img.shields.io/badge/TypeScript-0d0d1a?style=flat-square&logo=typescript&logoColor=3b82f6"/></td>
-<td><img src="https://img.shields.io/badge/Gemini_API-0d0d1a?style=flat-square&logo=google&logoColor=4ade80"/></td>
-<td><img src="https://img.shields.io/badge/Supabase-0d0d1a?style=flat-square&logo=supabase&logoColor=3ecf8e"/></td>
-</tr>
-</table>
-
-</td>
-
-<!-- PROJECT 4 -->
-<td align="left" valign="top" width="50%">
-
-<a href="https://github.com/nj-codes-24/media-mosh">
-
-```
-╔══════════════════════════════════════╗
-║  ⚡  media-mosh                      ║
-║  Client-side AI Processing Engine   ║
-╚══════════════════════════════════════╝
-```
-
-</a>
-
-**Architecture:** A zero-server, browser-native media processing suite handling image, video, audio, and PDF transformations entirely on the **client-side via WebAssembly and Web APIs** — no upload, no backend, no latency. The engineering challenge here is significant: real multimedia processing pipelines (format conversion, compression, trimming, merging) typically require server compute; `media-mosh` pushes all of that into the browser sandbox using modern Web APIs (`Canvas`, `Web Audio`, `File System Access`, `WebCodecs`). Built in pure **JavaScript** with a focus on instant access and absolute user data privacy.
-
-**Why it matters:** Proves deep understanding of compute constraints and browser-native ML inference boundaries — exactly the kind of systems thinking that separates AI engineers from AI API callers.
-
-<table border="0" cellpadding="3">
-<tr>
-<td><img src="https://img.shields.io/badge/JavaScript-0d0d1a?style=flat-square&logo=javascript&logoColor=f59e0b"/></td>
-<td><img src="https://img.shields.io/badge/WebAssembly-0d0d1a?style=flat-square&logo=webassembly&logoColor=6366f1"/></td>
-<td><img src="https://img.shields.io/badge/Web_APIs-0d0d1a?style=flat-square&logo=html5&logoColor=f97316"/></td>
-<td><img src="https://img.shields.io/badge/Privacy_First-0d0d1a?style=flat-square&logo=shield&logoColor=6ee7b7"/></td>
-</tr>
-</table>
-
-</td>
-
-</tr>
-</table>
-
-<br/>
-
-<!-- ████████████████████████████████████████████████████████████████ -->
-<!--               3D ISOMETRIC COMMIT CALENDAR                      -->
-<!-- ████████████████████████████████████████████████████████████████ -->
-
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,20,30&height=2&width=80%" />
-</div>
-
-<br/>
-
-<h2 align="center">📡 &nbsp;Activity</h2>
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nj-codes-24/nj-codes-24/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nj-codes-24/nj-codes-24/output/github-contribution-grid-snake.svg" />
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/nj-codes-24/nj-codes-24/output/github-contribution-grid-snake-dark.svg" width="100%" />
-</picture>
-
-</div>
-
-<br/>
-
-<div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=nj-codes-24&bg_color=0d0d1a&color=a78bfa&line=7c3aed&point=6ee7b7&area=true&area_color=7c3aed&hide_border=false&border_color=7c3aed&custom_title=Contribution+Graph" width="92%"/>
-</div>
 
 <br/>
 
